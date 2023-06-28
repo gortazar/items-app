@@ -73,13 +73,13 @@ spec:
     webhooks:
       - name: acceptance-test
         type: pre-rollout
-        url: http://flagger-loadtester.test/
+        url: http://flagger-loadtester.apps/
         timeout: 30s
         metadata:
           type: bash
-          cmd: "curl -sd 'test' http://items-canary:8080/api/items/ | grep Leche"
+          cmd: "curl -sd 'test' http://items-canary.items-flagger:8080/api/items/ | grep Leche"
       - name: load-test
-        url: http://flagger-loadtester.test/
+        url: http://flagger-loadtester.apps/
         timeout: 5s
         metadata:
-          cmd: "hey -z 1m -q 10 -c 2 http://items-canary.test:8080/api/items/"
+          cmd: "hey -z 1m -q 10 -c 2 http://items-canary.items-flagger:8080/api/items/"
