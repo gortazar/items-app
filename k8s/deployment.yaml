@@ -33,4 +33,4 @@ spec:
     version: "1.0.0"
   ports:
     - port: 8080
-type: LoadBalancer
+type: NodePort
