@@ -59,7 +59,7 @@ spec:
     - name: latency
       templateRef:
         name: latency
-        namespace: istio-system
+        namespace: flagger-system
       thresholdRange:
         max: 500
       interval: 1m
