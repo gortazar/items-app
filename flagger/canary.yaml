@@ -2,7 +2,7 @@ apiVersion: flagger.app/v1beta1
 kind: Canary
 metadata:
   name: items
-  namespace: items
+  namespace: items-flagger
 spec:
   # deployment reference
   targetRef:

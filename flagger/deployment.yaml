@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: items
-  namespace: items
+  namespace: items-flagger
 spec:
   replicas: 1
   selector:
